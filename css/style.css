@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Hare";
+  src: url(../font/Harenosora.otf);
+}
+
+@font-face {
+  font-family: ”;
+  src: url(../font/)
+}
+body {
+  background-color: #F4F9F8;
+  color: #62483C;
+  font-family: "Hare";
+}
+
+header {
+  width: 100%;
+    height: 80px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 6%;
+    position: fixed;
+    z-index: 30;
+    text-align: right;
+  
+}
+
+.header-p{
+  font-family: "Skia";
+  margin: 0 0 0 auto;
+}
+
+.top-i{
+  width : 140px;
+  margin-top: 100px;
+}
+
+
+.hsi-img{
+  width: 50px;
+}
+.header-nav-list li {
+  display: inline-block;
+  margin: 0 2.5vw;
+  margin-top: 80px;
+  margin-right:30px;
+}
+
+.header-nav-list a {
+ 
+  font-family: "Skia";
+  text-decoration: none;
+  color: #7C685C;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+
+}
+.top-b-img{
+  width: 100%;
+  padding-top: 0px;
+  position: relative; 
+}
+
+.diary-paper{
+  width: 55%;
+  position: absolute;
+  top: 35%;
+  left: 23%;
+  z-index: 10;
+}
+
+.gari1{
+  width: 40%;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 30%;
+}
+
+.to-back{
+  width: 10%;
+  position: absolute;
+  z-index: 10;
+  top:195%;
+  left: 20%;
+}
+
+.to-next{
+  width: 10%;
+  position: absolute;
+  z-index: 10;
+  top: 195%;
+  left: 70%;
+}
+
+.bottom-b-img{
+  width: 100%;
+  padding-top: 360px;
+  position: relative; 
+}
+
+.main-visual {
+  width: 100%;
+  height: 100vh;
+  padding-top: 0px;
+  position: relative;  
+}
+
+.main-visual-title {
+  
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  font-size: 70px;
+  line-height: 2; 
+}
+
+.main-visual-title span { 
+  padding: 0px;
+}
+
+.top-go{
+  position: fixed;
+  bottom: 8%;
+  right: 6%;
+  width: 100px;
+  z-index: 10;
+}
+
+.main-visual-img-wrap {
+  width: 100%;
+  height: 100%;
+  float: right;
+  margin-right: 0%;
+}
+
+.main-visual-img-wrap img {
+  width: 100%;
+  height: 100%; 
+}
+
+.main-visual-scroll {
+  width: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+}
+
+.main-visual-scroll img {
+  width: 100%;
+}
+
+.main-visual-scroll p {
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "QS";
+}
+
+
+.concept-title, .diary-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 30px;
+}
+.sab-concept-title, .sab-diary-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.concept-text, .diary-text{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.concept-img {
+  width: 100%
+}
+.catch-copy-title {
+  color: #82cbca;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "QS";
+  margin-bottom: 40px;
+}
+
+.catch-copy-text {
+  line-height: 2;
+}
+
+.slide-show{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ss-center{
+  width: 60%;
+}
+.cp-kami{
+  width: 100%;
+}
+.ss-left,.ss-right{
+  width: 50px;
+  
+}
+.arrow{
+  width: 100%;
+  height: auto;
+}
+.concept-maru{
+  display: flex;
+  justify-content: center;
+}
+.maru{
+  width:10px
+}
+.concept-maru{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 600px;
+  margin-right: 600px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.diary-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  flex-wrap: wrap;
+  list-style: none;
+  max-width: 800px;
+  margin: 100px auto;
+}
+
+.diary-list li{
+  width: 220px;
+  margin-bottom: 60px
+}
+
+.d-img{
+  width: 220px;
+  height:auto;
+}
+.day{
+  color:#7C685C;
+  font-size: 20px; 
+  text-align:center;
+}
+
+
+
+/* ここからフッター */
+
+footer {
+  background-color: #CAE3DE;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10%;
+  position: relative;
+}
+
+.scroll-top {
+  width: 60px;
+  text-decoration: none;
+  color: #231300;
+}
+
+.scroll-top img {
+  display: block;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 4px;
+}
+
+.scroll-top p {
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.copyright {
+  font-family:"Skia";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+
+
+
+/*レスポンシブデザインするときのおまじない　*/
+@media screen and (max-width: 400px){
+  .header{
+    height: 60px;
+  }
+
+  .header-nav-list{
+    display: none;
+  }
+
+  .header-logo-wrap{
+    width: 30px;
+  }
+
+  .main-visual{
+    height: 400px;
+    padding-top: 60px;
+    margin-bottom: 80px;
+  }
+
+.main-visual-img-wrap{
+  width: 100%;
+  float:none;
+  margin: 0;
+}
+
+.main-visual-title{
+  top:60%;
+  left:6%;
+  font-size: 20px;
+}
+
+.main-visual-scroll{
+  display: none;
+}
+
+
+h2 {
+  font-size: 24px;
+}
+
+footer{
+    height: 80px;
+    }
+  .copyright{
+    font-size:10px;
+  }
+
+  .scroll-top img{
+    width:20%;
+  }
+  .scroll-top p{
+    font-size: 10px;
+  }
+.header-sp-icon-wrap{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+.header-sp-icon-bar1,
+.header-sp-icon-bar2,
+.header-sp-icon-bar3{
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #231300;
+  border-radius: 1px;
+  transform-origin: left;
+  transition: all 0.2s ease-out;
+}
+
+.is-open .header-sp-icon-bar1{
+  transform: rotate(45deg);
+}
+.is-open .header-sp-icon-bar2{
+  transform: scale(0);
+}
+.is-open .header-sp-icon-bar3{
+  transform: rotate(-45deg);
+}
+
+.header-sp-nav{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: none;
+
+}
+
+
+.header-sp-nav-list{
+  width: 60%;
+  margin: auto;
+  list-style: none;
+}
+.header-sp-nav-img-wrap{
+  width: 100px;
+  margin: 15vh auto 10vh;
+}
+
+.header-sp-nav-img-wrap img{
+  width: 100%
+}
+
+.header-sp-nav-list li{
+  margin-bottom: 60px;
+}
+
+.header-sp-nav-list a{
+  font-family: "QS";
+  font-size: 20px;
+  color: #231300;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-sp-nav-list img{
+  width: 7px;
+}
+
