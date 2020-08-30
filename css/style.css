@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 @font-face {
@@ -23,10 +24,10 @@ header {
   width: 100%;
     height: 80px;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 0 6%;
     position: fixed;
+    top: 0;
     z-index: 30;
     text-align: right;
   
@@ -46,6 +47,19 @@ header {
 .hsi-img{
   width: 50px;
 }
+
+.header-nav-list {
+  margin-top: 29px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav-left{
+  display: flex;
+}
+
 .header-nav-list li {
   display: inline-block;
   margin: 0 2.5vw;
@@ -63,19 +77,7 @@ header {
   letter-spacing: 0.05em;
 
 }
-.top-b-img{
-  width: 100%;
-  padding-top: 0px;
-  position: relative; 
-}
 
-.diary-paper{
-  width: 55%;
-  position: absolute;
-  top: 35%;
-  left: 23%;
-  z-index: 10;
-}
 
 .gari1{
   width: 40%;
@@ -86,25 +88,18 @@ header {
 }
 
 .to-back{
-  width: 10%;
-  position: absolute;
+  width: 60%;
   z-index: 10;
-  top:195%;
-  left: 20%;
 }
 
 .to-next{
-  width: 10%;
-  position: absolute;
+  width: 60%;
   z-index: 10;
-  top: 195%;
-  left: 70%;
 }
 
 .bottom-b-img{
   width: 100%;
-  padding-top: 360px;
-  position: relative; 
+  position: absolute;
 }
 
 .main-visual {
@@ -117,8 +112,9 @@ header {
 .main-visual-title {
   
   position: absolute;
-  top: 10%;
-  left: 15%;
+  width: 60%;
+  top: 0%;
+  left: 0%;
   font-size: 70px;
   line-height: 2; 
 }
@@ -127,12 +123,60 @@ header {
   padding: 0px;
 }
 
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.st0 {
+  stroke: #62483C;
+  stroke-width: 1px;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  fill: none;
+  animation: main-animation 3 ease-in alternate forwards;
+}
+
+.st1 {
+  stroke:#62483C;
+  fill: none;
+  stroke-width: 0.5;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  animation: main-animation 3s ease-in alternate forwards;
+}
+
+@keyframes main-animation {
+  0% {
+    stroke-dashoffset: 5000;
+}
+  70%{
+    fill:transparent;
+}
+  100% {
+    stroke-dashoffset: 0;
+    fill: #62483C;
+}
+  
+}
+
 .top-go{
   position: fixed;
   bottom: 8%;
   right: 6%;
   width: 100px;
-  z-index: 10;
+  z-index: 20;
+}
+
+.back-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 75vh;
+  background-color: #CAE3DE;
+  z-index: -1;
+
 }
 
 .main-visual-img-wrap {
@@ -140,12 +184,27 @@ header {
   height: 100%;
   float: right;
   margin-right: 0%;
+  
 }
 
 .main-visual-img-wrap img {
   width: 100%;
   height: 100%; 
+  object-fit: fill;
+  object-position: bottom;
 }
+
+.syojo-wrap{
+  position: absolute;
+  bottom: 100px;
+  right: 300px;
+  width: 20vw;
+}
+
+.syojo-wrap img{
+  object-fit: contain;
+}
+
 
 .main-visual-scroll {
   width: 50px;
@@ -205,40 +264,69 @@ header {
 }
 
 .slide-show{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  position: relative; /*追加*/
 }
 
 .ss-center{
-  width: 60%;
+  width: 100%;
+  text-align: center; /*追加*/
 }
 .cp-kami{
-  width: 100%;
+  width: 60%;
 }
 .ss-left,.ss-right{
   width: 50px;
   
 }
 .arrow{
+  /* width: 100%;
+  height: auto; */
+
+  width: 4%;
+  position: absolute;
+  top:160px;
+  
+}
+
+.arrow-left{
+  left:5%;
+}
+
+.arrow-right{
+  right:5%;
+}
+
+.slide {
+  display: none;
   width: 100%;
-  height: auto;
+  text-align: center; 
 }
-.concept-maru{
-  display: flex;
-  justify-content: center;
+
+.active {/*.slide{...}よりも下に記述*/
+  display: block;
+  width: 100%;
+  text-align: center;
 }
-.maru{
-  width:10px
+
+.maru {
+  width:10px;
+  height: 10px;
+  border: solid 1px #7C685C;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.maru-active {
+  background-color: #7C685C;
 }
 .concept-maru{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 600px;
-  margin-right: 600px;
   margin-top: 50px;
   margin-bottom: 100px;
+  margin: 50px auto;
+  width: 25%;
 }
 .diary-list{
   display: flex;
@@ -261,10 +349,13 @@ header {
 }
 .day{
   color:#7C685C;
-  font-size: 20px; 
+  font-size: 17px; 
   text-align:center;
 }
 
+.slidesan{
+  width: 100%
+}
 
 
 /* ここからフッター */
@@ -311,136 +402,207 @@ footer {
   
 }
 
+.back-next{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  padding-top: 20%;
+}
+
+.back-next-day1{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 20%;
+}
+
+
+.back-next a {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.back-next-day1 a{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 個別記事ページ */
+
+.top-back-img{
+  width:100vw;
+  position: absolute;
+  top: 0;
+}
+
+.top-b-img{
+  width:100%;
+}
+
+.diary-p{
+  width: 60vw;
+  margin: 300px auto 50px;
+}
+.diary-p img{
+  width: 100%;
+
+}
+
+.diary-paper{
+  width:80%;
+  position: relative;
+  z-index: 20;
+}
+
 
 
 
 /*レスポンシブデザインするときのおまじない　*/
-@media screen and (max-width: 400px){
-  .header{
-    height: 60px;
+@media screen and (max-width: 420px){
+
+  .maru{
+    width: 8px;
+    height:8px;
   }
 
-  .header-nav-list{
+  .concept-maru{
+    margin:auto;
+  }
+  .concept-title, .diary-title{
+    font-size:20px;
+  }
+  .sab-concept-title, .sab-diary-title{
+    font-size: 10px;
+  }
+  .concept-text, .diary-text{
+    font-size:13px;
+  }
+  .hsi-img{
+    width:25px;
+  }
+  .header-p{
+    font-size: 10px;
+  }
+
+  .main-visual-img-wrap img{
+    object-fit: contain;
+  }
+
+  .main-visual-title{
+    top: 12%;
+    left: 0%;
+    width: 80%;
+    font-size: 45px;
+    line-height: 2.5;
+}
+  
+
+  .main-visual-scroll{
+    width: 38px;
+    bottom: 50px;
+  }
+
+  .arrow{
+    width: 65%;
+  }
+  .cp-kami{
+    width: 90%;
+  }
+
+  .top-go{
+    width: 80px;
+  }
+
+  .arrow{
+    top:180px;
+    width: 7%;
+  }
+
+  .cp-kami{
+    width: 80%;
+  }
+
+  .top-i{
+    width: 60px;
+    margin-top: 30px;
+  }
+
+  
+
+  .header-nav-list a{
+    font-size: 8px;
+  }
+
+
+  .gari1{
+    width: 55%;
+    top: 22%;
+    left: 22%;
+  }
+
+  .to-next{
+    width: 100%;
+  }
+
+  .to-back{
+    width: 100%;
+  }
+
+  .back-next{
+    padding: 0 10%;
+  }
+
+  .back-next-day1{
+    padding: 0 10%;
+  }
+
+  .bottom-b-img{
+    bottom: 0;
+  }
+
+  .header-nav-list li{
+    display: inline-block;
+    margin: 70px 2.0vw;
+  }
+
+  .header-nav-list ul{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center
+  }
+
+
+  .diary-p{
+    width: 80vw;
+    margin: 120px auto 50px;
+  }
+
+  .top-go{
     display: none;
   }
 
-  .header-logo-wrap{
-    width: 30px;
+  .syojo-wrap{
+    position: absolute;
+    bottom: 150px;
+    right: 30px;
+    width: 50vw;
   }
 
-  .main-visual{
-    height: 400px;
-    padding-top: 60px;
-    margin-bottom: 80px;
+
+
+
+}
+
+@media screen and (max-width: 320px){
+
+  .main-visual-title {
+    top: 10%;
+    left: 0%;
+    width: 80%;
+    font-size: 40px;
+    line-height: 2.5;}
   }
-
-.main-visual-img-wrap{
-  width: 100%;
-  float:none;
-  margin: 0;
-}
-
-.main-visual-title{
-  top:60%;
-  left:6%;
-  font-size: 20px;
-}
-
-.main-visual-scroll{
-  display: none;
-}
-
-
-h2 {
-  font-size: 24px;
-}
-
-footer{
-    height: 80px;
-    }
-  .copyright{
-    font-size:10px;
-  }
-
-  .scroll-top img{
-    width:20%;
-  }
-  .scroll-top p{
-    font-size: 10px;
-  }
-.header-sp-icon-wrap{
-  width: 20px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  z-index: 100;
-}
-.header-sp-icon-bar1,
-.header-sp-icon-bar2,
-.header-sp-icon-bar3{
-  position: relative;
-  width: 100%;
-  height: 2px;
-  background-color: #231300;
-  border-radius: 1px;
-  transform-origin: left;
-  transition: all 0.2s ease-out;
-}
-
-.is-open .header-sp-icon-bar1{
-  transform: rotate(45deg);
-}
-.is-open .header-sp-icon-bar2{
-  transform: scale(0);
-}
-.is-open .header-sp-icon-bar3{
-  transform: rotate(-45deg);
-}
-
-.header-sp-nav{
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: white;
-  display: none;
-
-}
-
-
-.header-sp-nav-list{
-  width: 60%;
-  margin: auto;
-  list-style: none;
-}
-.header-sp-nav-img-wrap{
-  width: 100px;
-  margin: 15vh auto 10vh;
-}
-
-.header-sp-nav-img-wrap img{
-  width: 100%
-}
-
-.header-sp-nav-list li{
-  margin-bottom: 60px;
-}
-
-.header-sp-nav-list a{
-  font-family: "QS";
-  font-size: 20px;
-  color: #231300;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.header-sp-nav-list img{
-  width: 7px;
-}
 
